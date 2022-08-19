@@ -1,0 +1,112 @@
+@import url(reset.css);
+@import url(header.css);
+@font-face {
+  font-family: superstar;
+  src: url(./superstar.ttf);
+}
+
+body {
+  background-color: #649cff;
+  text-align: center;
+  min-height: 100vh;
+}
+main {
+  display: inline-block;
+  position: relative;
+  margin-top: 2%;
+  padding: 15px;
+}
+.gameboy {
+  width: 100%;
+  max-width: 425px;
+}
+
+.animais-gif {
+  display: inline-block;
+}
+.animais-gif li {
+  display: none;
+}
+.animais-gif li img {
+  transform: translate(-10%, 5%);
+}
+.animais-gif .ativo {
+  display: inline-block;
+  position: absolute;
+  left: 38%;
+  bottom: 46.5%;
+  animation: anima 0.2s forwards;
+}
+.animal-texto {
+  position: absolute;
+  display: none;
+  text-align: center;
+}
+.animal-texto span {
+  display: none;
+  text-align: center;
+}
+
+.animal-texto .ativo {
+  bottom: 20%;
+  left: -32%;
+  width: 3vh;
+  padding: 5% 60%;
+  border-radius: 1%;
+  background: #649cff;
+  border: solid;
+  font-size: 1.5rem;
+  text-align: center;
+  justify-content: center;
+  font-family: "superstar";
+}
+.controle {
+  display: flex;
+  padding-top: 30px;
+  justify-content: center;
+  gap: 30px;
+}
+.controle-button {
+  padding: 5px 10px;
+  background-color: #649cff;
+  border: solid;
+  font-family: "superstar", Arial, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  z-index: 1;
+}
+.controle-button img {
+  height: 20px;
+}
+
+.controle-button:hover {
+  background-color: #5b8fe9;
+}
+.footer-bg {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: url("./imagem/z-nuvem.gif");
+  padding-bottom: 75px;
+  z-index: -1;
+}
+
+@keyframes anima {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.pokemon-img {
+  position: absolute;
+  left: 45%;
+  bottom: 65%;
+  transform: translate(-22%, 0);
+  height: 15%;
+}
