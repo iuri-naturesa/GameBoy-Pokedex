@@ -1,14 +1,17 @@
 @import url(reset.css);
 @import url(header.css);
-@font-face {
-  font-family: superstar;
-  src: url(./superstar.ttf);
-}
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;600&display=swap");
 
 body {
   background-color: #649cff;
   text-align: center;
   min-height: 100vh;
+  background: url(./imagem/3952024.png) no-repeat bottom center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Oxanium", cursive;
 }
 main {
   display: inline-block;
@@ -19,66 +22,6 @@ main {
 .gameboy {
   width: 100%;
   max-width: 425px;
-}
-
-/* .animais-gif {
-  display: inline-block;
-}
-.animais-gif li {
-  display: none;
-}
-.animais-gif li img {
-  transform: translate(-10%, 5%);
-}
-.animais-gif .ativo {
-  display: inline-block;
-  position: absolute;
-  left: 38%;
-  bottom: 46.5%;
-  animation: anima 0.2s forwards;
-}
-.animal-texto {
-  position: absolute;
-  display: none;
-  text-align: center;
-}
-.animal-texto span {
-  display: none;
-  text-align: center;
-}
-
-.animal-texto .ativo {
-  bottom: 20%;
-  left: -32%;
-  width: 3vh;
-  padding: 5% 60%;
-  border-radius: 1%;
-  background: #649cff;
-  border: solid;
-  font-size: 1.5rem;
-  text-align: center;
-  justify-content: center;
-  font-family: "superstar";
-} */
-/* .footer-bg {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  background: url("./imagem/z-nuvem.gif");
-  padding-bottom: 75px;
-  z-index: -1;
-} */
-
-@keyframes anima {
-  from {
-    opacity: 0;
-    transform: translate3d(-30px, 0, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
 }
 
 .pokemon-img {
@@ -104,7 +47,6 @@ main {
   width: 90%;
   top: 51%;
   left: 5%;
-  /* transform: translate(-12%, 50%); */
 }
 
 .input-search {
@@ -117,9 +59,11 @@ main {
   font-size: clamp(5px, 4vw, 1rem);
   color: white;
   border-radius: 20px;
+  font-family: "Oxanium", cursive;
 }
 .input-search::placeholder {
   color: rgba(255, 255, 255, 0.636);
+  font-family: "Oxanium", cursive;
 }
 
 .circulo {
@@ -167,11 +111,36 @@ main {
   box-shadow: 0 0px #666;
   transform: translateY(4px);
 }
+
+.github {
+  position: absolute;
+  max-width: 25%;
+  left: 7%;
+  bottom: 3%;
+  padding: 1%;
+  border: solid 2px rgba(0, 0, 0, 0);
+  border-radius: 8px;
+}
+
+.github:hover {
+  border: solid black;
+}
 @media (max-width: 380px) {
   .controle {
     transform: translate(-13%, 5%);
   }
   .controle-button {
     padding: 1% 30%;
+  }
+}
+
+@keyframes anima {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
