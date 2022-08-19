@@ -14,14 +14,14 @@ main {
   display: inline-block;
   position: relative;
   margin-top: 2%;
-  padding: 15px;
+  padding: 0px 15px 0 15px;
 }
 .gameboy {
   width: 100%;
   max-width: 425px;
 }
 
-.animais-gif {
+/* .animais-gif {
   display: inline-block;
 }
 .animais-gif li {
@@ -59,30 +59,8 @@ main {
   text-align: center;
   justify-content: center;
   font-family: "superstar";
-}
-.controle {
-  display: flex;
-  padding-top: 30px;
-  justify-content: center;
-  gap: 30px;
-}
-.controle-button {
-  padding: 5px 10px;
-  background-color: #649cff;
-  border: solid;
-  font-family: "superstar", Arial, sans-serif;
-  font-size: 2rem;
-  text-align: center;
-  z-index: 1;
-}
-.controle-button img {
-  height: 20px;
-}
-
-.controle-button:hover {
-  background-color: #5b8fe9;
-}
-.footer-bg {
+} */
+/* .footer-bg {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -90,7 +68,7 @@ main {
   background: url("./imagem/z-nuvem.gif");
   padding-bottom: 75px;
   z-index: -1;
-}
+} */
 
 @keyframes anima {
   from {
@@ -109,4 +87,91 @@ main {
   bottom: 65%;
   transform: translate(-22%, 0);
   height: 15%;
+}
+.pokemon-info {
+  position: absolute;
+  font-weight: 600;
+  bottom: 55%;
+  left: 30%;
+  transform: translate(-12%, 70%);
+  font-size: clamp(8px, 5vw, 25px);
+}
+.pokemon-nome {
+  text-transform: capitalize;
+}
+.form {
+  position: absolute;
+  width: 90%;
+  top: 51%;
+  left: 5%;
+  /* transform: translate(-12%, 50%); */
+}
+
+.input-search {
+  width: 60%;
+  padding: 1%;
+  outline: none;
+  border: 3px solid #333;
+  font-weight: 600;
+  background-color: #898d93;
+  font-size: clamp(5px, 4vw, 1rem);
+  color: white;
+  border-radius: 20px;
+}
+.input-search::placeholder {
+  color: rgba(255, 255, 255, 0.636);
+}
+
+.circulo {
+  position: absolute;
+  bottom: 25%;
+  left: 12%;
+  width: 10%;
+  height: 5%;
+  padding: 10%;
+  border-radius: 100%;
+  background-color: #c0c0be;
+  border: solid 4px #868a8f;
+  transform: translate(-5%, 12%);
+}
+.controle {
+  position: absolute;
+  bottom: 25%;
+  left: 8%;
+  display: flex;
+  padding: 10%;
+  border-radius: 100%;
+  gap: 10px;
+  transform: translate(-8%, 5%);
+  z-index: 1;
+}
+.controle-button {
+  padding: 2% 40%;
+  border: 2px solid #333;
+  border-radius: 15px;
+  font-size: clamp(5px, 5vh, 1rem);
+  font-weight: 600;
+  color: white;
+  background-color: #898d93;
+  box-shadow: 0 4px rgb(71, 71, 71);
+  cursor: pointer;
+}
+
+.controle-button:hover {
+  background-color: #c4c4c4;
+  color: rgb(0, 0, 0);
+}
+.controle-button:active {
+  background-color: #c4c4c4;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0px #666;
+  transform: translateY(4px);
+}
+@media (max-width: 380px) {
+  .controle {
+    transform: translate(-13%, 5%);
+  }
+  .controle-button {
+    padding: 1% 30%;
+  }
 }
